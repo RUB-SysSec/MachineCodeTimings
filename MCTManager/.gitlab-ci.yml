@@ -1,0 +1,13 @@
+before_script:
+build_master:
+ variables:
+
+ script:
+  - git submodule update --init
+  - mkdir build-mctmanager
+  - cd build-mctmanager
+  - qmake ../
+  - make -j4
+  - cp Manager /opt/MCTManager/
+ tags:
+  - mctmanager

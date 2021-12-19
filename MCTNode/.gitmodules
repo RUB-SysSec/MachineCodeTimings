@@ -1,0 +1,3 @@
+[submodule "qamqp"]
+	path = qamqp
+	url = https://github.com/mbroadst/qamqp

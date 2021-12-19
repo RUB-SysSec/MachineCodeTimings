@@ -1,0 +1,63 @@
+before_script:
+build_node_server:
+ only:
+  - only_rdtsc
+ variables:
+ script:
+  - git submodule update --init
+  - mkdir build-mctnode
+  - cd build-mctnode
+  - qmake ../
+  - make -j4
+  - cp Node /opt/MCTNode/Node_new
+ tags:
+  - mctnode, mctserver
+  
+
+build_node_optiplex5040:
+ variables:
+ script:
+  - git submodule update --init
+  - mkdir build-mctnode
+  - cd build-mctnode
+  - qmake ../
+  - make -j4
+  - cp Node /opt/MCTNode/Node_new
+ tags:
+  - mctnode, optiplex5040
+  
+build_node_optiplex3020:
+ variables:
+ script:
+  - git submodule update --init
+  - mkdir build-mctnode
+  - cd build-mctnode
+  - qmake ../
+  - make -j4
+  - cp Node /opt/MCTNode/Node_new
+ tags:
+  - mctnode, optiplex3020
+  
+build_node_elitebook:
+ variables:
+ script:
+  - git submodule update --init
+  - mkdir build-mctnode
+  - cd build-mctnode
+  - qmake ../
+  - make -j4
+  - cp Node /opt/MCTNode/Node_new
+ tags:
+  - mctnode, elitebook
+
+build_node_optiplex755:
+ variables:
+ script:
+  - git submodule update --init
+  - mkdir build-mctnode
+  - cd build-mctnode
+  - qmake ../
+  - make -j4
+  - cp Node /opt/MCTNode/Node_new
+ tags:
+  - mctnode, optiplex755   
